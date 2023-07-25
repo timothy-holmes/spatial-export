@@ -1,0 +1,152 @@
+Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\Existing Assets\Update Tool\run.py", line 183, in <module>
+    layer_file_paths = [
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\Existing Assets\Update Tool\run.py", line 188, in <listcomp>
+    source_file_name=layer['source_file_name'],
+KeyError: 'source_file_name'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Easement.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Easement.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Easement.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Easement.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Easement.dat'
+Copied/overwritten layer Easement without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Parcels.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Parcels.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Parcels.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Parcels.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Parcels.dat'
+Copied/overwritten layer Parcels without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Alignment.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Alignment.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Alignment.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Alignment.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Alignment.dat'
+Copied/overwritten layer Road_Alignment without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name.dat'
+Copied/overwritten layer Road_Name without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name_Labels.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name_Labels.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name_Labels.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name_Labels.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Road_Name_Labels.dat'
+Copied/overwritten layer Road_Name_Labels without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Street_Address.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Street_Address.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Street_Address.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Street_Address.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Street_Address.dat'
+Copied/overwritten layer Street_Address without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Suburb.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Suburb.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Suburb.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Suburb.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Cadastre/Suburb.dat'
+Copied/overwritten layer Suburb without dropped fields
+Invalid layer: Boundaries
+Invalid layer: Municipality_CWW
+Invalid layer: Recycled_Water_Main
+Invalid layer: Recycled_Water_Node
+Invalid layer: Recycled_Water_Service_Conn
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Branch.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Branch.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Branch.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Branch.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Branch.dat'
+Copied/overwritten layer Abandoned_Sewer_Branch without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Node.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Node.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Node.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Node.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Node.dat'
+Copied/overwritten layer Abandoned_Sewer_Node without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Pipe.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Pipe.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Pipe.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Pipe.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Pipe.dat'
+Copied/overwritten layer Abandoned_Sewer_Pipe without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Structure.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Structure.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Structure.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Structure.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Structure.dat'
+Copied/overwritten layer Abandoned_Sewer_Structure without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Symbol.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Symbol.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Symbol.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Symbol.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Symbol.dat'
+Copied/overwritten layer Abandoned_Sewer_Symbol without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Ventilation.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Ventilation.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Ventilation.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Ventilation.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Abandoned_Sewer_Ventilation.dat'
+Copied/overwritten layer Abandoned_Sewer_Ventilation without dropped fields
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Sewer_Branch.tab'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Sewer_Branch.ind'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Sewer_Branch.id'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Sewer_Branch.map'
+[Errno 2] No such file or directory: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\Existing Assets\\Update Tool/Central Region/Sewer/Sewer_Branch.dat'
+Copied/overwritten layer Sewer_Branch without dropped fields
+Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\Existing Assets\Update Tool\run.py", line 220, in <module>
+    processing.run(
+  File "C:\PROGRA~1\QGIS33~1.3\bin\../apps/qgis/python/plugins\processing\tools\general.py", line 108, in run
+    return Processing.runAlgorithm(algOrName, parameters, onFinish, feedback, context)
+  File "C:\PROGRA~1\QGIS33~1.3\bin\../apps/qgis/python/plugins\processing\core\Processing.py", line 173, in runAlgorithm
+    raise QgsProcessingException(msg)
+_core.QgsProcessingException: Unable to execute algorithm
+Could not load source layer for INPUT: N:/Asset Information/MUNSYS MapInfo Data/Production/Data/Sewer/Sewer_Nodex32.tab not found
+Copied/overwritten layer Easement without dropped fields
+Copied/overwritten layer Parcels without dropped fields
+Copied/overwritten layer Road_Alignment without dropped fields
+Copied/overwritten layer Road_Name without dropped fields
+Copied/overwritten layer Road_Name_Labels without dropped fields
+Copied/overwritten layer Street_Address without dropped fields
+Copied/overwritten layer Suburb without dropped fields
+Invalid layer: Boundaries
+Invalid layer: Municipality_CWW
+Invalid layer: Recycled_Water_Main
+Invalid layer: Recycled_Water_Node
+Invalid layer: Recycled_Water_Service_Conn
+Copied/overwritten layer Abandoned_Sewer_Branch without dropped fields
+Copied/overwritten layer Abandoned_Sewer_Node without dropped fields
+Copied/overwritten layer Abandoned_Sewer_Pipe without dropped fields
+Copied/overwritten layer Abandoned_Sewer_Structure without dropped fields
+Copied/overwritten layer Abandoned_Sewer_Symbol without dropped fields
+Copied/overwritten layer Abandoned_Sewer_Ventilation without dropped fields
+Copied/overwritten layer Sewer_Branch without dropped fields
+Generated layer: Sewer_Nodex32, fields_to_drop=['ASSET_KEY', 'SW_ID', 'SW_SID', 'SW_UNIQUEID'], path=C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\Existing Assets\Update Tool/../Central Region/Sewer/Sewer_Nodex32.tab
+Copied/overwritten layer Sewer_Node without dropped fields
+Copied/overwritten layer Sewer_Pipe without dropped fields
+Copied/overwritten layer Sewer_Structure without dropped fields
+Copied/overwritten layer Sewer_Symbol without dropped fields
+Copied/overwritten layer Sewer_Ventilation without dropped fields
+Copied/overwritten layer Abandoned_Water_Main without dropped fields
+Copied/overwritten layer Abandoned_Water_Node without dropped fields
+Copied/overwritten layer Abandoned_Water_Service_Conn without dropped fields
+Copied/overwritten layer Abandoned_Water_Symbol without dropped fields
+Copied/overwritten layer Water_Main without dropped fields
+Copied/overwritten layer Water_Node without dropped fields
+Copied/overwritten layer Water_Service_Conn without dropped fields
+Copied/overwritten layer Water_Symbol without dropped fields
+Copied/overwritten layer SP_POTABLE without dropped fields
+Copied/overwritten layer SP_PROPERTY without dropped fields
+Copied/overwritten layer SP_RECYCLED without dropped fields
+Copied/overwritten layer SP_ROAD without dropped fields
+Copied/overwritten layer SP_SEWGPIPE without dropped fields
+Copied/overwritten layer SP_SEWNODE without dropped fields
+Copied/overwritten layer SP_SEWRPIPE without dropped fields
+Copied/overwritten layer SP_SEWSERV without dropped fields
+Copied/overwritten layer SP_SEWVPIPE without dropped fields
+Copied/overwritten layer SP_STRADDR without dropped fields
+Copied/overwritten layer SP_WATNODE without dropped fields
+Copied/overwritten layer SP_WATPIPE without dropped fields
+Copied/overwritten layer SP_WATSERV without dropped fields
