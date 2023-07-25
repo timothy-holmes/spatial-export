@@ -1,0 +1,333 @@
+{
+    "settings": {
+        "source_path": {
+            "Central": "//citywestwater.com.au/data/PCCommon/Asset Information/MUNSYS MapInfo Data/Production/Data/{source_service}/{source_file_name}.{extension}",
+            "Western": "//wro-gisapp/MunsysExport/{source_file_name}.{extension}"
+        },
+        "destination_path": {
+            "Central": "{cwd}/../Central Region/{destination_service}/{destination_file_name}.{extension}",
+            "Western": "{cwd}/../Western Region/{destination_service}/{destination_file_name}.{extension}"
+        },
+        "format_extensions": {
+            "tab": ["tab", "ind", "id", "map", "dat"],
+            "shp": ["shp", "shx", "dbf", "prj"]
+        }
+    },
+    "files": [
+        {
+            "source_file_name": "Easement",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Parcels",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Road_Alignment",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Road_Name",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Road_Name_Labels",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Street_Address",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Suburb",
+            "source_service": "Cadastre",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Boundaries",
+            "source_service": "Other",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Municipality_CWW",
+            "source_service": "Other",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "Recycled_Water_Main",
+            "source_service": "Recycled_Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Recycled_Water_Node",
+            "source_service": "Recycled_Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Recycled_Water_Service_Conn",
+            "source_service": "Recycled_Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Branch",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Node",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Pipe",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Structure",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Symbol",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Sewer_Ventilation",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Branch",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Node",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Pipe",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Structure",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Symbol",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Sewer_Ventilation",
+            "source_service": "Sewer",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "Abandoned_Water_Main",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Abandoned_Water_Node",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Abandoned_Water_Service_Conn",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Abandoned_Water_Symbol",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Water_Main",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Water_Node",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Water_Service_Conn",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "Water_Symbol",
+            "source_service": "Water",
+            "source_file_format": "tab",
+            "region": "Central",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "SP_POTABLE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "SP_PROPERTY",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "SP_RECYCLED",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "SP_ROAD",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "SP_SEWGPIPE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "SP_SEWNODE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "SP_SEWRPIPE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "SP_SEWSERV",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "SP_SEWVPIPE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Sewer"
+        },
+        {
+            "source_file_name": "SP_STRADDR",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Cadastre"
+        },
+        {
+            "source_file_name": "SP_WATNODE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "SP_WATPIPE",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Water"
+        },
+        {
+            "source_file_name": "SP_WATSERV",
+            "source_service": "",
+            "source_file_format": "shp",
+            "region": "Western",
+            "destination_service": "Water"
+        }
+    ]
+}
