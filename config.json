@@ -19,224 +19,320 @@
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Parcels",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Road_Alignment",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Road_Name",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Road_Name_Labels",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Street_Address",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Suburb",
             "source_service": "Cadastre",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Boundaries",
             "source_service": "Other",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Municipality_CWW",
             "source_service": "Other",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Recycled_Water_Main",
             "source_service": "Recycled_Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Recycled_Water_Node",
             "source_service": "Recycled_Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Recycled_Water_Service_Conn",
             "source_service": "Recycled_Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Branch",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Node",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Pipe",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Structure",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Symbol",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Sewer_Ventilation",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Sewer_Branch",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Sewer_Node",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Sewer_Pipe",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64",
+                "refactor:PIPE_DIA"
+            ]
         },
         {
             "source_file_name": "Sewer_Structure",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+            ]
         },
         {
             "source_file_name": "Sewer_Symbol",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Sewer_Ventilation",
             "source_service": "Sewer",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Water_Main",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Water_Node",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Water_Service_Conn",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Abandoned_Water_Symbol",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Water_Main",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Water_Node",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Water_Service_Conn",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "Water_Symbol",
             "source_service": "Water",
             "source_file_format": "tab",
             "region": "Central",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": [
+                "drop_fields.Integer64"
+            ]
         },
         {
             "source_file_name": "SP_POTABLE",

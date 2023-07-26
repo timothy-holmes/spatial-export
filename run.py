@@ -78,39 +78,52 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 sys.excepthook = handle_exception
 
 # Helper functions
+def is_file_deletable(d_file):
+    file_dirname = os.path.dirname(d_file)               
+    if os.access(file_dirname, os.W_OK | os.X_OK):
+        try:
+            file = open(d_file, 'ab')
+            file.close()
+            return True
+        except OSError:
+            pass
+    return False
+
 def delete_file(d_file):
     if os.path.exists(d_file):
         try:
             os.remove(d_file)
         except OSError as e:
             logging.error(e)
+            return False
         else:
-            logging.debug(f"Deleted file: {d_file}")
+            return True
 
-def copy_or_overwrite(s_file,d_file):
-    delete_file(d_file)
-    try:
-        shutil.copy(s_file, d_file)
-    except Exception as e:
-        logging.error(e)
+def drop_fields_Integer64(input, layer, layer_obj):
+    fields_to_keep = [
+        field.name() for field in layer_obj.fields() 
+        if not field.typeName() in ['Integer64'] # TODO: is this the only unsupported field type?
+    ]
+    if fields_to_keep and layer['source_file_format'] == 'tab':
+        return processing.run(
+            "native:retainfields", 
+            {
+                'INPUT': input,
+                'COLUMN': fields_to_keep,
+                'OUTPUT': 'TEMPORARY_OUTPUT'
+            }
+        )
     else:
-        logging.debug(f"Copied file: {s_file} -> {d_file}")
+        return None
 
-def append_x32_suffix(d_file):
-    return "".join([d_file[:-4],'x32','.tab'])
 
-# Pre-start checks (4)
+# Pre-start checks (5)
 # 1. CWD is IP - Spatial\Input\Existing Assets\Update Tool or thereabouts
 is_correct_tool_directory = all([
     "Existing Assets" in cwd,
     'IP - Spatial' in cwd,
-    os.path.exists(
-        os.path.join(
-            cwd,
-            "../",
-            "Central Region"
-        )
-    ),
+    os.path.exists(os.path.join(cwd,"../","Central Region")),
+    os.path.exists(os.path.join(cwd,"../","Western Region"))
 ])
 if not is_correct_tool_directory:
     # TODO: create custom exception for this error
@@ -118,8 +131,8 @@ if not is_correct_tool_directory:
 
 # 2. Networks are available
 is_network_connected = all([
-    os.path.exists('N:/'), # better to use full server path ie. \\citywestwater.com.au\data\pccommon\
-    os.path.exists('A:/')
+    os.path.exists("//citywestwater.com.au/data/PCCommon/"),
+    os.path.exists("//wro-gisapp/MunsysExport/")
 ])
 if not is_network_connected: 
     raise NetworkError('Network drive(s) is not available. Confirm connection to VPN.')
@@ -137,27 +150,11 @@ else:
 # 4. Inside QGIS/OS4GEOW environment
 # TODO: add condition to account difference in interpreter path between LTR vs spot release
 using_qgis_interpreter = 'QGIS' in sys.executable
-if not using_qgis_interpreter and not ('attemptedToFindInstallationOfQGIS' in sys.argv): # additional argument prevents multi-level recursion
-    logging.warning(f'Python interpreter {sys.executable} not inside QGIS/OSGEO4W environment. Will attempt to rerun in QGIS environment.')
-    qgis_folders = [f.name for f in os.scandir('C:/Program Files') if f.is_dir() and 'QGIS' in f.name]
-    latest_qgis_version = max(qgis_folders, key=lambda x: version.parse(x))
-    logging.debug(f'QGIS versions detected ({latest_qgis_version}): {qgis_folders}')
-
-    subp = subprocess.run(
-        [
-        f"C:/Program Files/{latest_qgis_version}/bin/python-qgis.bat", 
-        __file__,
-        'attemptedToFindInstallationOfQGIS'
-        ], 
-        capture_output=True,
-        text=True
-    )
-    logging.info('Subprocess run with result: {subp.stdout}')
-    if subp.stderr:
-        logging.info('Subprocess error: {subp.stderr}')
+if not using_qgis_interpreter:
+    raise Exception('Run this script from the QGIS/OS4GEOW environment.')
 
 # Initialize the QGIS application, load processing module
-from qgis.core import QgsVectorLayer, QgsApplication
+from qgis.core import QgsVectorLayer, QgsApplication, QgsProcessingException
 qgs = QgsApplication([], False)
 qgs.initQgis()
 sys.path.append(
@@ -178,6 +175,13 @@ try:
     Processing.initialize()
 except ModuleNotFoundError:
     logging.error(f"Couldn't import QGIS processing module. {[p for p in sys.path if 'QGIS' in p]}")
+
+# 5. GDAL version >= 3.28.6
+try:
+    import osgeo.gdal
+    assert version.parse(osgeo.gdal.__version__) >= version.parse('3.7')
+except AssertionError:
+    raise Exception(f"GDAL version {osgeo.gdal.__version__} detected. Please update to QGIS 3.28.7+ (LTR) or 3.30.3+ (Spot Release).")
 
 
 # Load the layers and copy the files
@@ -202,38 +206,75 @@ for layer in files:
         ) for ext in settings['format_extensions'][layer['source_file_format']]
     ]
 
-    # Check if the layer is valid when loaded
+    # Check if layer can be deleted
+    is_deletable = all([is_file_deletable(d_file) for _, d_file in layer_file_paths])
+    if not is_deletable:
+        logging.warning(f"File(s) cannot be deleted: {layer_file_paths}")
+        continue
+
     layer_obj = QgsVectorLayer(
         layer_file_paths[0][0], 
         layer['source_file_name'], 
         'ogr'
     )
 
-    if layer_obj.isValid():
-        # Check for TAB file field types incompatible with QGIS version <= 3.28.6
-        fields_to_drop = [
-            field.name() for field in layer_obj.fields() 
-            if field.typeName() in ['Integer64'] # TODO: is this the only unsupported field type?
-        ]
-        if fields_to_drop and layer['source_file_format'] == 'tab':
-            # drop column(s)
-            for _, destination_file in layer_file_paths:
-                delete_file(append_x32_suffix(destination_file))
-            processing.run(
-                "native:deletecolumn", 
-                {
-                    'INPUT': layer_file_paths[0][0],
-                    'COLUMN': fields_to_drop,
-                    'OUTPUT': append_x32_suffix(layer_file_paths[0][1])
-                }
-            )
-            logging.info(f"Generated x32 layer: {layer['source_file_name']}x32, {fields_to_drop=}, path={append_x32_suffix(layer_file_paths[0][1])}")
+    # Check if the layer is valid when loaded
+    if not layer_obj.isValid():
+        logging.warning(f"{layer['source_file_name']}: Invalid layer")
+        continue
 
-        for source_file, destination_file in layer_file_paths:
-            copy_or_overwrite(source_file, destination_file)
-        logging.info(f"Copied layer {layer['source_file_name']} without dropped fields")
-    else:
-        logging.warning(f"Invalid layer: {layer['source_file_name']}")
+    # Assume processing will be successful
+    for _, d_file in layer_file_paths:
+        if delete_file(d_file):
+            logging.debug(f"{layer['source_file_name']}: Deleted {d_file}")
+        else:
+            logging.critical(f"{layer['source_file_name']}: Failed to delete {d_file}")
+            continue
+
+    # Doing processing
+    input = layer_file_paths[0][0]
+    result = None
+    operations = layer['operations'] or ['copy_layer']
+    for i, operation in enumerate(settings['operations']):
+        output = 'TEMPORARY_OUTPUT' if i+1 < len(operations) else layer_file_paths[0][1]
+
+        match operation:
+            case "drop_fields.Integer64":
+                alg_name = "native:deletecolumn"
+                kwargs = {
+                    'INPUT': input,
+                    'COLUMN': [field.name() for field in layer_obj.fields() if field.typeName() in ['Integer64']],
+                    'OUTPUT': output
+                }
+            case "refactor_PIPE_DIA":
+                alg_name = "native:fieldcalculator", 
+                kwargs = {
+                    'INPUT': input,
+                    'FIELD_NAME':'PIPE_DIA_INT',
+                    'FIELD_TYPE':1,
+                    'FIELD_LENGTH':0,
+                    'FIELD_PRECISION':0,
+                    'FORMULA':'if(to_int(left("Name",5)),to_int(left("Name",5)),1)',
+                    'OUTPUT': output
+                }
+            case "copy_layer":
+                alg_name = "native:retainfields"
+                kwargs = {
+                    'INPUT': input,
+                    'FIELDS': [field.name() for field in layer_obj.fields()],
+                    'OUTPUT': output
+                }
+
+        try:
+            result = processing.run(alg_name, kwargs)
+        except QgsProcessingException as e:
+            logging.error(f"{layer['source_file_name']}: {e}")
+            continue
+        else:
+            logging.debug(f"{layer['source_file_name']}: Ran {alg_name}, {result=}")
+
+        if result:
+            input = result['output']
 
 # make all files read-only
 for root, dirs, files in os.walk(os.path.abspath(os.path.join(cwd,'../'))):
@@ -250,8 +291,7 @@ for root, dirs, files in os.walk(os.path.abspath(os.path.join(cwd,'../'))):
             # Check if the path is a file
             os.chmod(file_path, file_permissions | stat.S_IREAD)
             file_count += 1
-
-logging.debug(f"Set all files to read-only: {file_count} files modified")
+            logging.debug(f'{file}, set to read-only {os.stat(file_path).st_mode}')
 
 # Exit the QGIS application
 qgs.exitQgis()
