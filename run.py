@@ -236,6 +236,7 @@ for layer in files:
     result = None
     operations = layer['operations'] or ['copy_layer']
     for i, operation in enumerate(settings['operations']):
+        # use temp folder for intermediate outputs
         output = 'TEMPORARY_OUTPUT' if i+1 < len(operations) else layer_file_paths[0][1]
 
         match operation:
@@ -247,7 +248,7 @@ for layer in files:
                     'OUTPUT': output
                 }
             case "refactor_PIPE_DIA":
-                alg_name = "native:fieldcalculator", 
+                alg_name = "native:fieldcalculator"
                 kwargs = {
                     'INPUT': input,
                     'FIELD_NAME':'PIPE_DIA_INT',
@@ -276,6 +277,9 @@ for layer in files:
         if result:
             input = result['output']
 
+# Exit the QGIS application
+qgs.exitQgis()
+
 # make all files read-only
 for root, dirs, files in os.walk(os.path.abspath(os.path.join(cwd,'../'))):
     file_count = 0
@@ -292,6 +296,3 @@ for root, dirs, files in os.walk(os.path.abspath(os.path.join(cwd,'../'))):
             os.chmod(file_path, file_permissions | stat.S_IREAD)
             file_count += 1
             logging.debug(f'{file}, set to read-only {os.stat(file_path).st_mode}')
-
-# Exit the QGIS application
-qgs.exitQgis()
