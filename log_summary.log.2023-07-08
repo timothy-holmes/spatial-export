@@ -1,0 +1,100 @@
+2023-07-10-170613 | Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\2. GWW GIS Exports\Existing Assets\Update Tool\run.py", line 125, in <module>
+    raise NetworkError('Network drive(s) is not available. Confirm connection to VPN.')
+NetworkError: Network drive(s) is not available. Confirm connection to VPN.
+2023-07-10-171629 | Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\2. GWW GIS Exports\Existing Assets\Update Tool\run.py", line 185, in <module>
+    layer_file_paths = [
+  File "C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\2. GWW GIS Exports\Existing Assets\Update Tool\run.py", line 194, in <listcomp>
+    (settings['destination_path'][layer['region']]
+KeyError: 'tool_directory'
+2023-07-10-172436 | Copied layer Easement without dropped fields
+2023-07-10-172449 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Cadastre/Parcels.id'
+2023-07-10-172450 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Cadastre/Parcels.map'
+2023-07-10-172532 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Cadastre/Parcels.dat'
+2023-07-10-172828 | Copied layer Parcels without dropped fields
+2023-07-10-173232 | Copied layer Road_Alignment without dropped fields
+2023-07-10-173252 | Copied layer Road_Name without dropped fields
+2023-07-10-173316 | Copied layer Road_Name_Labels without dropped fields
+2023-07-10-173456 | Copied layer Street_Address without dropped fields
+2023-07-10-173502 | Copied layer Suburb without dropped fields
+2023-07-10-173502 | Invalid layer: Boundaries
+2023-07-10-173502 | Invalid layer: Municipality_CWW
+2023-07-10-173502 | Invalid layer: Recycled_Water_Main
+2023-07-10-173502 | Invalid layer: Recycled_Water_Node
+2023-07-10-173502 | Invalid layer: Recycled_Water_Service_Conn
+2023-07-10-173506 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Branch.id'
+2023-07-10-173506 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Branch.map'
+2023-07-10-173506 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Branch.dat'
+2023-07-10-173509 | Copied layer Abandoned_Sewer_Branch without dropped fields
+2023-07-10-173513 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Node.id'
+2023-07-10-173514 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Node.map'
+2023-07-10-173514 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Node.dat'
+2023-07-10-173522 | Copied layer Abandoned_Sewer_Node without dropped fields
+2023-07-10-173526 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Pipe.id'
+2023-07-10-173526 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Pipe.map'
+2023-07-10-173526 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Pipe.dat'
+2023-07-10-173529 | Copied layer Abandoned_Sewer_Pipe without dropped fields
+2023-07-10-173532 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Structure.id'
+2023-07-10-173532 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Structure.map'
+2023-07-10-173532 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Structure.dat'
+2023-07-10-173532 | Copied layer Abandoned_Sewer_Structure without dropped fields
+2023-07-10-173539 | Copied layer Abandoned_Sewer_Symbol without dropped fields
+2023-07-10-173542 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Ventilation.id'
+2023-07-10-173542 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Ventilation.map'
+2023-07-10-173542 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Abandoned_Sewer_Ventilation.dat'
+2023-07-10-173542 | Copied layer Abandoned_Sewer_Ventilation without dropped fields
+2023-07-10-173558 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Branch.id'
+2023-07-10-173602 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Branch.map'
+2023-07-10-173622 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Branch.dat'
+2023-07-10-173917 | Copied layer Sewer_Branch without dropped fields
+2023-07-10-174119 | Generated x32 layer: Sewer_Nodex32, fields_to_drop=['ASSET_KEY', 'SW_ID', 'SW_SID', 'SW_UNIQUEID'], path=C:\Users\holmest1\Greater Western Water\IP - Spatial - Documents\Input\2. GWW GIS Exports\Existing Assets\Update Tool/../Central Region/Sewer/Sewer_Nodex32.tab
+2023-07-10-174129 | Copied layer Sewer_Node without dropped fields
+2023-07-10-174139 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Pipe.id'
+2023-07-10-174139 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Pipe.map'
+2023-07-10-174145 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Pipe.dat'
+2023-07-10-174254 | Copied layer Sewer_Pipe without dropped fields
+2023-07-10-174256 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Structure.id'
+2023-07-10-174256 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Structure.map'
+2023-07-10-174256 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Structure.dat'
+2023-07-10-174256 | Copied layer Sewer_Structure without dropped fields
+2023-07-10-174405 | Copied layer Sewer_Symbol without dropped fields
+2023-07-10-174408 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Ventilation.id'
+2023-07-10-174408 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Ventilation.map'
+2023-07-10-174408 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Central Region/Sewer/Sewer_Ventilation.dat'
+2023-07-10-174409 | Copied layer Sewer_Ventilation without dropped fields
+2023-07-10-174426 | Copied layer Abandoned_Water_Main without dropped fields
+2023-07-10-174439 | Copied layer Abandoned_Water_Node without dropped fields
+2023-07-10-174442 | Copied layer Abandoned_Water_Service_Conn without dropped fields
+2023-07-10-174446 | Copied layer Abandoned_Water_Symbol without dropped fields
+2023-07-10-174613 | Copied layer Water_Main without dropped fields
+2023-07-10-174704 | Copied layer Water_Node without dropped fields
+2023-07-10-174833 | Copied layer Water_Service_Conn without dropped fields
+2023-07-10-174846 | Copied layer Water_Symbol without dropped fields
+2023-07-10-174857 | Copied layer SP_POTABLE without dropped fields
+2023-07-10-174857 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Cadastre/SP_PROPERTY.shp'
+2023-07-10-174904 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Cadastre/SP_PROPERTY.dbf'
+2023-07-10-174918 | Copied layer SP_PROPERTY without dropped fields
+2023-07-10-174919 | Copied layer SP_RECYCLED without dropped fields
+2023-07-10-174924 | Copied layer SP_ROAD without dropped fields
+2023-07-10-174924 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWGPIPE.shp'
+2023-07-10-174925 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWGPIPE.dbf'
+2023-07-10-174930 | Copied layer SP_SEWGPIPE without dropped fields
+2023-07-10-174930 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWNODE.shp'
+2023-07-10-174930 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWNODE.dbf'
+2023-07-10-174936 | Copied layer SP_SEWNODE without dropped fields
+2023-07-10-174937 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWRPIPE.shp'
+2023-07-10-174937 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWRPIPE.dbf'
+2023-07-10-174937 | Copied layer SP_SEWRPIPE without dropped fields
+2023-07-10-174938 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWSERV.shp'
+2023-07-10-174940 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWSERV.dbf'
+2023-07-10-174946 | Copied layer SP_SEWSERV without dropped fields
+2023-07-10-174946 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWVPIPE.shp'
+2023-07-10-174946 | [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\holmest1\\Greater Western Water\\IP - Spatial - Documents\\Input\\2. GWW GIS Exports\\Existing Assets\\Update Tool/../Western Region/Sewer/SP_SEWVPIPE.dbf'
+2023-07-10-174946 | Copied layer SP_SEWVPIPE without dropped fields
+2023-07-10-175146 | Copied layer SP_STRADDR without dropped fields
+2023-07-10-175208 | Copied layer SP_WATNODE without dropped fields
+2023-07-10-175227 | Copied layer SP_WATPIPE without dropped fields
+2023-07-10-175243 | Copied layer SP_WATSERV without dropped fields

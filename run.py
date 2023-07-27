@@ -235,7 +235,8 @@ for layer in files:
     input = layer_file_paths[0][0]
     result = None
     operations = layer['operations'] or ['copy_layer']
-    for i, operation in enumerate(settings['operations']):
+    
+    for i, operation in enumerate(operations):
         # use temp folder for intermediate outputs
         output = 'TEMPORARY_OUTPUT' if i+1 < len(operations) else layer_file_paths[0][1]
 

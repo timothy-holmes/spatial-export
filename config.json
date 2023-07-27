@@ -2,11 +2,13 @@
     "settings": {
         "source_path": {
             "Central": "//citywestwater.com.au/data/PCCommon/Asset Information/MUNSYS MapInfo Data/Production/Data/{source_service}/{source_file_name}.{extension}",
-            "Western": "//wro-gisapp/MunsysExport/{source_file_name}.{extension}"
+            "Western": "//wro-gisapp/MunsysExport/{source_file_name}.{extension}",
+            "operations": []
         },
         "destination_path": {
             "Central": "{cwd}/../Central Region/{destination_service}/{destination_file_name}.{extension}",
-            "Western": "{cwd}/../Western Region/{destination_service}/{destination_file_name}.{extension}"
+            "Western": "{cwd}/../Western Region/{destination_service}/{destination_file_name}.{extension}",
+            "operations": []
         },
         "format_extensions": {
             "tab": ["tab", "ind", "id", "map", "dat"],
@@ -339,91 +341,104 @@
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": []
         },
         {
             "source_file_name": "SP_PROPERTY",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": []
         },
         {
             "source_file_name": "SP_RECYCLED",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": []
         },
         {
             "source_file_name": "SP_ROAD",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": []
         },
         {
             "source_file_name": "SP_SEWGPIPE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": []
         },
         {
             "source_file_name": "SP_SEWNODE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": []
         },
         {
             "source_file_name": "SP_SEWRPIPE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": []
         },
         {
             "source_file_name": "SP_SEWSERV",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": []
         },
         {
             "source_file_name": "SP_SEWVPIPE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Sewer"
+            "destination_service": "Sewer",
+            "operations": []
         },
         {
             "source_file_name": "SP_STRADDR",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Cadastre"
+            "destination_service": "Cadastre",
+            "operations": []
         },
         {
             "source_file_name": "SP_WATNODE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": []
         },
         {
             "source_file_name": "SP_WATPIPE",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": []
         },
         {
             "source_file_name": "SP_WATSERV",
             "source_service": "",
             "source_file_format": "shp",
             "region": "Western",
-            "destination_service": "Water"
+            "destination_service": "Water",
+            "operations": []
         }
     ]
 }
