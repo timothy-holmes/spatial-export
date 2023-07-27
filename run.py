@@ -94,6 +94,7 @@ def delete_file(d_file):
         try:
             os.remove(d_file)
         except OSError as e:
+            e_str = str(e).replace('\n', ', ')
             logging.error(e)
             return False
         else:
@@ -219,7 +220,9 @@ for layer in files:
     )
 
     # Check if the layer is valid when loaded
-    if not layer_obj.isValid():
+    if layer_obj.isValid():
+        logging.debug(f"{layer['source_file_name']}: Valid layer")
+    else:
         logging.warning(f"{layer['source_file_name']}: Invalid layer")
         continue
 
@@ -235,7 +238,7 @@ for layer in files:
     input = layer_file_paths[0][0]
     result = None
     operations = layer['operations'] or ['copy_layer']
-    
+
     for i, operation in enumerate(operations):
         # use temp folder for intermediate outputs
         output = 'TEMPORARY_OUTPUT' if i+1 < len(operations) else layer_file_paths[0][1]
@@ -243,14 +246,16 @@ for layer in files:
         # match operation:
             # case "drop_fields.Integer64":
         if operation == "drop_fields.Integer64":
-            alg_name = "native:deletecolumn"
+            # edge case not accounted for: all fields are dropped
+            # can switch to "native:deletecolumn" if all fields are dropped
+            alg_name = "native:retainfields"
             kwargs = {
                 'INPUT': input,
-                'COLUMN': [field.name() for field in layer_obj.fields() if field.typeName() in ['Integer64']],
+                'FIELDS': [field.name() for field in layer_obj.fields() if not field.typeName() in ['Integer64']],
                 'OUTPUT': output
             }
         # case "refactor_PIPE_DIA":
-        elif operation == "refactor_PIPE_DIA":
+        elif operation == "refactor.PIPE_DIA":
             alg_name = "native:fieldcalculator"
             kwargs = {
                 'INPUT': input,
@@ -258,7 +263,18 @@ for layer in files:
                 'FIELD_TYPE':1,
                 'FIELD_LENGTH':0,
                 'FIELD_PRECISION':0,
-                'FORMULA':'if(to_int(left("Name",5)),to_int(left("Name",5)),1)',
+                'FORMULA': """
+                    CASE
+                        WHEN "PIPE_DIA" = 'UNKN' THEN 0  
+                        WHEN strpos("PIPE_DIA", 'x') > 0 THEN
+                            (
+                            to_int(left("PIPE_DIA", strpos("PIPE_DIA", 'x') - 1)) + 
+                            to_int(right("PIPE_DIA", length("PIPE_DIA") - strpos("PIPE_DIA", 'x')))
+                            ) / 2
+                        WHEN strpos("PIPE_DIA", 'x') = 0 THEN
+                            to_int("PIPE_DIA")
+                    END
+                """,
                 'OUTPUT': output
             }
         # case "copy_layer":
@@ -275,13 +291,14 @@ for layer in files:
         try:
             result = processing.run(alg_name, kwargs)
         except QgsProcessingException as e:
-            logging.error(f"{layer['source_file_name']}: {e}")
+            e_str = str(e).replace('\n', ', ')
+            logging.error(f"{layer['source_file_name']}, {alg_name=}, {kwargs=}: {e_str}")
             continue
         else:
             logging.debug(f"{layer['source_file_name']}: Ran {alg_name}, {result=}")
 
         if result:
-            input = result['output']
+            input = result['OUTPUT']
 
 # Exit the QGIS application
 qgs.exitQgis()
@@ -302,3 +319,5 @@ for root, dirs, files in os.walk(os.path.abspath(os.path.join(cwd,'../'))):
             os.chmod(file_path, file_permissions | stat.S_IREAD)
             file_count += 1
             logging.debug(f'{file}, set to read-only {os.stat(file_path).st_mode}')
+
+# TODO: add git add/commit/push to job if available (use GitPython)

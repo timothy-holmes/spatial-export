@@ -224,7 +224,7 @@
             "destination_service": "Sewer",
             "operations": [
                 "drop_fields.Integer64",
-                "refactor:PIPE_DIA"
+                "refactor.PIPE_DIA"
             ]
         },
         {
