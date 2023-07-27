@@ -239,32 +239,37 @@ for layer in files:
         # use temp folder for intermediate outputs
         output = 'TEMPORARY_OUTPUT' if i+1 < len(operations) else layer_file_paths[0][1]
 
-        match operation:
-            case "drop_fields.Integer64":
-                alg_name = "native:deletecolumn"
-                kwargs = {
-                    'INPUT': input,
-                    'COLUMN': [field.name() for field in layer_obj.fields() if field.typeName() in ['Integer64']],
-                    'OUTPUT': output
-                }
-            case "refactor_PIPE_DIA":
-                alg_name = "native:fieldcalculator"
-                kwargs = {
-                    'INPUT': input,
-                    'FIELD_NAME':'PIPE_DIA_INT',
-                    'FIELD_TYPE':1,
-                    'FIELD_LENGTH':0,
-                    'FIELD_PRECISION':0,
-                    'FORMULA':'if(to_int(left("Name",5)),to_int(left("Name",5)),1)',
-                    'OUTPUT': output
-                }
-            case "copy_layer":
-                alg_name = "native:retainfields"
-                kwargs = {
-                    'INPUT': input,
-                    'FIELDS': [field.name() for field in layer_obj.fields()],
-                    'OUTPUT': output
-                }
+        # match operation:
+            # case "drop_fields.Integer64":
+        if operation == "drop_fields.Integer64":
+            alg_name = "native:deletecolumn"
+            kwargs = {
+                'INPUT': input,
+                'COLUMN': [field.name() for field in layer_obj.fields() if field.typeName() in ['Integer64']],
+                'OUTPUT': output
+            }
+        # case "refactor_PIPE_DIA":
+        elif operation == "refactor_PIPE_DIA":
+            alg_name = "native:fieldcalculator"
+            kwargs = {
+                'INPUT': input,
+                'FIELD_NAME':'PIPE_DIA_INT',
+                'FIELD_TYPE':1,
+                'FIELD_LENGTH':0,
+                'FIELD_PRECISION':0,
+                'FORMULA':'if(to_int(left("Name",5)),to_int(left("Name",5)),1)',
+                'OUTPUT': output
+            }
+        # case "copy_layer":
+        elif operation == "copy_layer":
+            alg_name = "native:retainfields"
+            kwargs = {
+                'INPUT': input,
+                'FIELDS': [field.name() for field in layer_obj.fields()],
+                'OUTPUT': output
+            }
+        else:
+            raise Exception(f"Unknown operation: {operation}")
 
         try:
             result = processing.run(alg_name, kwargs)
