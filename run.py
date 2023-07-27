@@ -53,7 +53,7 @@ logging.config.dictConfig(
             }
         },
         "root": {
-            "handlers": ["console", "log_file", "summary_file"],
+            "handlers": ["console", "log_file", "summary"],
             "level": "DEBUG"
         }
     }
